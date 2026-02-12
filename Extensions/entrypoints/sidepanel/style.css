@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Match web app: light background, bluish accent, Plus Jakarta Sans */
+:root {
+  --gapah-bg: #F6F7F9;
+  --gapah-dark: #0B0D10;
+  --gapah-accent: #3B9DF5;
+  --gapah-text: #0B0D10;
+  --gapah-text-secondary: #6B7280;
+  --gapah-emerald: #10B981;
+  --gapah-border: rgba(0, 0, 0, 0.08);
+  --gapah-input-bg: #fff;
+  --gapah-surface: #fff;
+  --gapah-card-border: rgba(0, 0, 0, 0.06);
+  --gapah-radius: 0.875rem;
+  --gapah-radius-lg: 1.75rem;
+  /* Legacy aliases for components using var(--accent) etc. */
+  --accent: #3B9DF5;
+  --primary: #2563EB;
+  --bg: #F6F7F9;
+  --surface: #fff;
+  --text: #0B0D10;
+  --text-muted: #6B7280;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background: var(--gapah-bg);
+  color: var(--gapah-text);
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Web-app–style components */
+@layer components {
+  .gapah-card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--gapah-card-border);
+    border-radius: var(--gapah-radius-lg);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+  }
+  .gapah-btn-primary {
+    background: linear-gradient(135deg, var(--gapah-accent) 0%, #2563EB 100%);
+    color: white;
+    box-shadow: 0 10px 40px rgba(59, 157, 245, 0.25);
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .gapah-btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 48px rgba(59, 157, 245, 0.35);
+  }
+  .gapah-btn-secondary {
+    background: transparent;
+    border: 1.5px solid var(--gapah-border);
+    color: var(--gapah-text);
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .gapah-btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.04);
+    transform: translateY(-1px);
+  }
+  .gapah-input {
+    width: 100%;
+    border-radius: var(--gapah-radius);
+    border: 1px solid var(--gapah-card-border);
+    background: var(--gapah-input-bg);
+    color: var(--gapah-text);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .gapah-input::placeholder {
+    color: var(--gapah-text-secondary);
+  }
+  .gapah-input:focus {
+    outline: none;
+    border-color: var(--gapah-accent);
+    box-shadow: 0 0 0 3px rgba(59, 157, 245, 0.15);
+  }
+  .gapah-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gapah-text-secondary);
+  }
+  .gapah-platform-pill {
+    border-radius: 9999px;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .gapah-platform-pill-active {
+    background: rgba(59, 157, 245, 0.12);
+    color: var(--gapah-accent);
+    border: 1px solid rgba(59, 157, 245, 0.25);
+  }
+  .gapah-platform-pill-inactive {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--gapah-text-secondary);
+    border: 1px solid transparent;
+  }
+  .gapah-platform-pill-inactive:hover {
+    color: var(--gapah-text);
+    background: rgba(0, 0, 0, 0.06);
+  }
+  .gapah-variation-card {
+    border-radius: var(--gapah-radius);
+    border: 1px solid var(--gapah-card-border);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.75rem 1rem;
+    color: var(--gapah-text);
+  }
+  .gapah-dashed-zone {
+    border-radius: var(--gapah-radius);
+    border: 1px dashed rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--gapah-text-secondary);
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+  }
+  .gapah-dashed-zone:hover {
+    border-color: rgba(59, 157, 245, 0.4);
+    background: rgba(59, 157, 245, 0.06);
+    color: var(--gapah-text);
+  }
+}
