@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Gapah Logo - Primary -->
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon: Abstract lens/speed mark -->
+  <g transform="translate(20, 16)">
+    <!-- Outer ring representing a lens -->
+    <circle cx="44" cy="44" r="38" stroke="url(#iconGrad)" stroke-width="4" fill="none" opacity="0.3"/>
+    <!-- Inner dynamic element: forward arrow/bolt shape -->
+    <path d="M30 28 L54 44 L30 60 L38 44 Z" fill="url(#iconGrad)"/>
+    <!-- Lens flare accent -->
+    <circle cx="58" cy="30" r="6" fill="url(#glow)" opacity="0.6"/>
+    <circle cx="62" cy="26" r="3" fill="#10B981" opacity="0.4"/>
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="118" y="72" font-family="'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif" font-size="52" font-weight="800" letter-spacing="-1" fill="#F8FAFC">
+    Gapah
+  </text>
+  
+  <!-- Tagline -->
+  <text x="120" y="96" font-family="'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif" font-size="13" font-weight="500" letter-spacing="3" fill="#94A3B8" text-transform="uppercase">
+    SWIFT AD INTELLIGENCE
+  </text>
+</svg>
